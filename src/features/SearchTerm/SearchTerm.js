@@ -17,28 +17,14 @@ export default function SearchTerm() {
       dispatch(setSearchTerm(userInput));
     }
 
-    const onClearSearchTermHandler = () => {
-      dispatch(clearSearchTerm());
-
-    }
     return (
-        <div id="search-container">  
-          <img id="search-icon" src={searchIconSearch} alt="Search Icon"/>      
-          <input 
-            id='search'
-            type='text'
-            value={searchTerm}
-            onChange={onChangeSearchTermHandler}
-            placeholder='Search Reddit Minimal' />
-           {searchTerm.length > 0 && (
-            <button
-              onClick={onClearSearchTermHandler} 
-              type="button" 
-              id="clear-search-button"
-            >
-              <img id="clear-icon" src={searchIconCancel} alt='Clear Search Icon'/> 
-            </button>
-           )}
-        </div>
+      <div id="search-container">  
+        <input 
+          id='search'
+          type='search'
+          value={searchTerm}
+          onChange={onChangeSearchTermHandler}
+          placeholder='Search Reddit Minimal' />
+      </div>
     );
 };
