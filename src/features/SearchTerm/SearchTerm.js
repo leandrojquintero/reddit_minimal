@@ -1,11 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { setSearchTerm, clearSearchTerm, selectSearchTerm } from './searchTermSlice';
-
-//asset import
-import searchIconSearch from '../../assets/icons/search-search-50.png'
-import searchIconCancel from '../../assets/icons/search-cancel-50.png'
+import { setSearchTerm, selectSearchTerm } from './searchTermSlice';
 
 export default function SearchTerm() {
   const dispatch = useDispatch();
